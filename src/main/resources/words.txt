@@ -1,0 +1,3 @@
+Spark SQL is a Spark module for structured data processing
+The interfaces provided by Spark SQL provide Spark with more information about the structure of both the data and the computation being performed
+Internally Spark SQL uses this extra information to perform extra optimizations
