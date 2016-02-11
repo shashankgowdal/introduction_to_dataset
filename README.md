@@ -2,7 +2,7 @@ This repository contains example code and sample data for *Introduction to Datas
 Follow the below steps to clone code and setup your machine.
 
 
-## Prerequisites
+## 1. Prerequisites
 
 * Java
 * Maven 3
