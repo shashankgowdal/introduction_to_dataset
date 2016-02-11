@@ -1,6 +1,8 @@
 package com.shashank.creation
 
+import org.apache.spark.sql.Dataset
 import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.sql.functions._
 
 
 /**
@@ -20,6 +22,7 @@ object FromFile {
     val path = "src/main/resources/people.json"
     val peopleDS = sqlContext.read.json(path).as[Person]
     peopleDS.filter(_.age > 20).show()
+
   }
 
 }

@@ -1,14 +1,14 @@
-package com.shashank.creation
+package com.shashank.semistructured
 
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
- * Created by shashank on 27/1/16.
+ * Created by shashank on 10/2/16.
  */
-case class Person2(name: String, age: Int)
-case class Person3(name: String, age: String)
 
-object SemistructuredDataHandling {
+case class Person3(name: String, age: Int)
+
+object DownCast {
 
   def main(args: Array[String]) {
     val sc: SparkContext = new SparkContext("local","meetup",new SparkConf())
@@ -16,9 +16,10 @@ object SemistructuredDataHandling {
     import sqlContext.implicits._
 
     val path = "src/main/resources/people.json"
-    //sqlContext.read.json(path).as[Person2].show()
-    sqlContext.read.json(path).as[Person3].show()
-
+    val peopleDF = sqlContext.read.json(path)
+    peopleDF.printSchema()
+    val peopleDS = peopleDF.as[Person3]
+    peopleDS.foreach(println(_))
   }
 
 }
