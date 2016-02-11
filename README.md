@@ -1,4 +1,4 @@
-This repository contains example code and sample data for *Introduction to Machine Learning With Spark* session.
+This repository contains example code and sample data for *Introduction to Dataset API in Spark* session.
 Follow the below steps to clone code and setup your machine.
 
 
@@ -10,21 +10,15 @@ Follow the below steps to clone code and setup your machine.
 
 ## 2. Getting code
 
-           git clone https://github.com/phatak-dev/introduction_to_ml_with_spark.git
+           git clone https://github.com/shashankgowdal/introduction_to_dataset.git
 
 
 ## 3. Build
 
         mvn clean install
 
-### 4. Testing
 
-then run the following command from code directory
-
-     java -cp target/spark-ml-examples.jar com.madhukaraphatak.spark.machinelearning.LinearRegressionExample local
-
-
-## 5. Loading into an IDE
+## 4. Loading into an IDE
 
 You can run all the examples from terminal. If you want to run from the IDE, follow the below steps
 
@@ -36,6 +30,6 @@ You can run all the examples from terminal. If you want to run from the IDE, fol
 
 
 
-##6. Up to date
+##5. Up to date
 
 Please pull before coming to the session to get the latest code.
